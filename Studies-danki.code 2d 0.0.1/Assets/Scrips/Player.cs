@@ -35,12 +35,25 @@ public class Player : MonoBehaviour
 
         if(movement > 0)
         {
+            if (!isJumping)
+            {
+            anim.SetInteger("transition", 1);
+            }
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         
         if (movement < 0)
         {
+            if (!isJumping)
+            {
+                anim.SetInteger("transition", 1);
+            }
             transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+
+        if (movement == 0 && !isJumping)
+        {
+            anim.SetInteger("transition", 0);
         }
     }
 
@@ -50,13 +63,16 @@ public class Player : MonoBehaviour
         {
             if(!isJumping)
             {
-                rig.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                anim.SetInteger("transition", 2);
+                rig.AddForce(new Vector2(0, jumpForce * 1), ForceMode2D.Impulse);
                 doubleJump = true;
+                isJumping = true;
             }
             else
             {
-                if (!doubleJump)
+                if (doubleJump)
                 {
+                    anim.SetInteger("transition", 2);
                     rig.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                     doubleJump = false;
                 }
@@ -69,7 +85,6 @@ public class Player : MonoBehaviour
         if (coll.gameObject.layer == 8)
         {
             isJumping = false;
-
         }
     }
 }
