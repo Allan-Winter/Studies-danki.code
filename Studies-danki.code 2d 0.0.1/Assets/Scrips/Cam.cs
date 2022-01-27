@@ -21,8 +21,8 @@ public class Cam : MonoBehaviour
             Vector3 following = new Vector3(player.position.x, transform.position.y, transform.position.z);
             transform.position = Vector3.Lerp(transform.position, following, smooth * Time.deltaTime);
         }
-       
-        //if(player.position.x <= 30f)
+
+        //if(player.position.x <= PUT HERE THE VALUE X OF THE END OF THE LEVEL.)
         //{
         //Vector3 following = new Vector3(player.position.x, transform.position.y, transform.position.z);
         //transform.position = Vector3.Lerp(transform.position, following, smooth * Time.deltaTime);
