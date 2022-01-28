@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2086962217210736502}
   m_Layer: 0
   m_Name: EnemyGuy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ba7c2240c79e54a87e6ea6713cd42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  walkTime: 2
+  speed: 0
+  walkTime: 1
   walkRight: 0
+  health: 5

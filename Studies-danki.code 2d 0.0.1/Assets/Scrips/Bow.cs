@@ -5,6 +5,8 @@ using UnityEngine;
 public class Bow : MonoBehaviour
 {
     public float speed;
+    public int damage;
+
     public bool isRight;
 
     private Rigidbody2D rig;
@@ -26,6 +28,15 @@ public class Bow : MonoBehaviour
         else
         {
             rig.velocity = Vector2.left * speed;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag =="Enemy")
+        {
+            collision.GetComponent<EnemyGuy>().Damage(damage);
+            Destroy(gameObject);
         }
     }
 }
