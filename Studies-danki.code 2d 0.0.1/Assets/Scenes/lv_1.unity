@@ -12270,14 +12270,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2086962217210736502, guid: a0e42f8ce1f3ea44ab6f693dd0a53403, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086962217210736502, guid: a0e42f8ce1f3ea44ab6f693dd0a53403, type: 3}
-      propertyPath: walkTime
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2086962217210736524, guid: a0e42f8ce1f3ea44ab6f693dd0a53403, type: 3}
       propertyPath: m_Name
       value: EnemyGuy (1)
@@ -13372,8 +13364,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41, y: 255.6}
-  m_SizeDelta: {x: 241.83, y: 137.06}
+  m_AnchoredPosition: {x: 74.062416, y: 255.6}
+  m_SizeDelta: {x: 489.3245, y: 137.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063875658
 MonoBehaviour:
@@ -13467,18 +13459,6 @@ PrefabInstance:
     - target: {fileID: 2086962217210736497, guid: a0e42f8ce1f3ea44ab6f693dd0a53403, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086962217210736502, guid: a0e42f8ce1f3ea44ab6f693dd0a53403, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086962217210736502, guid: a0e42f8ce1f3ea44ab6f693dd0a53403, type: 3}
-      propertyPath: health
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086962217210736502, guid: a0e42f8ce1f3ea44ab6f693dd0a53403, type: 3}
-      propertyPath: walkTime
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2086962217210736524, guid: a0e42f8ce1f3ea44ab6f693dd0a53403, type: 3}
       propertyPath: m_Name

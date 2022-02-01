@@ -9,6 +9,7 @@ public class EnemyGuy : MonoBehaviour
     public bool walkRight = true;
 
     public int health;
+    public int damage = 1;
 
     private float timer;
 
@@ -54,6 +55,14 @@ public class EnemyGuy : MonoBehaviour
         {
             //destroy the enemy
             Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Player>().Damege(damage);
         }
     }
 }
