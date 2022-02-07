@@ -140,8 +140,7 @@ public class Player : MonoBehaviour
 
         if (health <= 0)
         { //Call the GAME OVER
-            Debug.Log("GAME OVER");
-
+            GameController.instance.GameOver();
         }
     }
 
@@ -156,6 +155,11 @@ public class Player : MonoBehaviour
         if (coll.gameObject.layer == 8)
         {
             isJumping = false;
+        }
+
+        if(coll.gameObject.layer == 9)
+        {
+            GameController.instance.GameOver();
         }
     }
 }
